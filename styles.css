@@ -139,7 +139,7 @@ a.button {
     background-color: #222222;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    border-bottom: 7px #444444 solid;
+    border-bottom: 4px #444444 solid;
 }
 
 a.icon span{
