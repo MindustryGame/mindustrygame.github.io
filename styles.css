@@ -6,6 +6,7 @@ body {
 html {
     background: url(images/background.png) no-repeat center center fixed;
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,6 +15,14 @@ html {
 
 *{
     font-family: '5squared_pixelregular';
+}
+
+center {
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
 }
 
 .tint {
@@ -41,6 +50,7 @@ html {
     filter: drop-shadow(5px 5px 5px #222);
     width: 600px; 
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 ul {
@@ -149,6 +159,7 @@ a.icon span{
     background-size: 28px !important;
     background-repeat: no-repeat !important;
     image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 a.button:hover {
