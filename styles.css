@@ -5,8 +5,6 @@ body {
 
 html {
     background: url(images/background.png) no-repeat center center fixed;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -49,8 +47,6 @@ center {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     width: 600px; 
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
 }
 
 ul {
