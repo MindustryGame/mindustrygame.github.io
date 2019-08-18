@@ -12,7 +12,7 @@ html {
 }
 
 *{
-    font-family: '5squared_pixelregular';
+    font-family: 'audiowideregular';
 }
 
 center {
@@ -35,9 +35,9 @@ center {
 }
 
 @font-face {
-    font-family: '5squared_pixelregular';
-    src: url('5squared-pixel-webfont.woff2') format('woff2'),
-         url('5squared-pixel-webfont.woff') format('woff');
+    font-family: 'audiowideregular';
+    src: url('font_latin-webfont.woff2') format('woff2'),
+         url('font_latin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -154,8 +154,6 @@ a.icon span{
     padding-top: 2px;
     background-size: 28px !important;
     background-repeat: no-repeat !important;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
 }
 
 a.button:hover {
