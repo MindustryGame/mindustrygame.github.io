@@ -187,16 +187,13 @@ a.button:hover {
 
 .zoomer {
     cursor: pointer;
-    max-width: 210px;
-    max-height: 260px;
+    max-height: 300px;
     width: auto;
     height: auto;
     transition: 0.2s;
 }
 
 .zoomer.height1{
-    max-width: none;
-    max-height: 260;
 }
 
 .zoomer.height2{
