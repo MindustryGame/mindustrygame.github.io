@@ -28,7 +28,7 @@ const config = {
             };
             xhr.send();
 		},
-		parse_data:function(arry){
+		parse_data:function(arry){ /* somewhat copypasta of a fetcher i did in pythonk */
 			var returndat = [];
 			for(var i in arry){
 				var editions = arry[i];
@@ -52,11 +52,12 @@ const config = {
 				}
 				cachedata["Assets"] = asset_jayson;
 				returndat.push(cachedata);
-				console.log(cachedata);
 			}
 			this.releases = returndat;
-			this.latest_release = returndat[0]["Name"];
-			this.latest_release_url = returndat[0]["Assets"]["Mindustry.jar"];
+			if(returndat.length >= 0){
+				this.latest_release = returndat[0]["Name"];
+				this.latest_release_url = returndat[0]["Assets"]["Mindustry.jar"];	
+			}
 		}
 	}
 }

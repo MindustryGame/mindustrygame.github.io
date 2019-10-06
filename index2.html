@@ -10,29 +10,33 @@
     <meta property="og:description" content="A sandbox tower-defense game." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://mindustrygame.github.io" />
-    <meta property="og:image" content="http://mindustrygame.github.io/icon.png" />
+    <meta property="og:image" content="https://mindustrygame.github.io/images/header.png" />
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <!-- <meta name="twitter:site" content="@publisher_handle"> -->
     <meta name="twitter:title" content="Mindustry">
     <meta name="twitter:description" content="A sandbox tower-defense game.">
     <meta name="twitter:image:src" content="https://mindustrygame.github.io/images/header.png">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="icon" href="./icon.png">
     <link rel="stylesheet" href="./main.css?whywontthisreload">
-    <script src="./lazyload.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="./imagezoom.js?querytoreloadthis"></script>
 </head>
 <body>
     <div class="header">
         <img class="icon-40" src="./icon.png"></img> &nbsp;&nbsp;
         <img class="header-logo" src="./images/header.png"></img>
         <div class="header-buttons">
-            <a onclick="document.getElementById('Info').scrollIntoView({behavior:'smooth',block:'nearest'});" class="button no-shadows">Info</a>
-            <a onclick="document.getElementById('Links').scrollIntoView({behavior:'smooth',block:'nearest'});" class="button no-shadows">Links</a>
-            <a onclick="document.getElementById('Download').scrollIntoView({behavior:'smooth',block:'nearest'});" class="button no-shadows">Download</a>
+            <a onclick="document.getElementById('Info').scrollIntoView({behavior:'smooth'});" class="button no-shadows">Info</a>
+            <a onclick="document.getElementById('Links').scrollIntoView({behavior:'smooth'});" class="button no-shadows">Links</a>
+            <a onclick="document.getElementById('Download').scrollIntoView({behavior:'smooth'});" class="button no-shadows">Download</a>
         </div>
+    </div>
+    <div id="ImageZoom" style="display: none;">
+        <img src="./images/icons/icon-cancel.png" onclick="hideimg()" style="padding-left: 94%;">
+        <img id="ImageZoom-Img" src="./images/1.png" style="width: 97%;height: auto;padding-top: 4px;"></img>
     </div>
     <div class="title-screen-para"></div>
     <div id="content">
@@ -53,15 +57,31 @@
         </div>
         <div id="Top-images">
             <div class="Top-image">
-                <div class="Top-image-1">
-                    <!-- <div class="caption">BONKBONKBONK</div> -->
+                <div class="Top-image-1" onclick="viewimg('./images/1.png')">
+                    <div class="Top-image-caption">
+                        <p style="margin: 0px;padding-top: 341px;font-size: 1.5em;">
+                            Defend your base from <b style="color:#f4ba6e">waves of powerful enemies</b>.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="Top-image">
-                <div class="Top-image-2"></div>
+                <div class="Top-image-2" onclick="viewimg('./images/2.png')">
+                    <div class="Top-image-caption">
+                        <p style="margin: 0px;padding-top: 341px;font-size: 1.5em;">
+                            Build complex designs for <b style="color:#f4ba6e">processing materials</b>.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="Top-image">
-                <div class="Top-image-3"></div>
+                <div class="Top-image-3" onclick="viewimg('./images/3.png')">
+                    <div class="Top-image-caption">
+                        <p style="margin: 0px;padding-top: 341px;font-size: 1.5em;">
+                            Build and fight with other players on <b style="color:#f4ba6e">multiplayer servers</b>.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="Download">
@@ -74,7 +94,7 @@
             <div class="Download-iframe">
                 <iframe src="https://store.steampowered.com/widget/1127400" frameborder="0" style="width:auto;height:190px;"></iframe>
                 <iframe src="https://itch.io/embed/140169?bg_color=222222&amp;fg_color=eeeeee&amp;link_color=f4ba6e&amp;border_color=363636" frameborder="0" style="width:auto;height:167px;"></iframe>
-                <div class="git-download"> <!-- download directly from git releases -->
+                <div class="git-download"> <!-- download directly from git releases, requires vue.js -->
                     <div class="git-header">
                         <h2>Download Mindustry</h2> on Github
                     </div>
@@ -99,10 +119,13 @@
             </div>
         </div>
         <div id="Links">
-            <a class="button icon" href="https://github.com/Anuken/Mindustry"><span style="background: url(images/icons/icon-dev-builds.png);">Github</span></a>
-            <a class="button icon" href="https://trello.com/b/aE2tcUwF/mindustry-trello"><span style="background: url(images/icons/icon-trello.png);">Trello</span></a>
-            <a class="button icon" href="https://discord.gg/mindustry"><span style="background: url(images/icons/icon-discord.png);">Discord</span></a>
-            <a class="button icon" href="./wiki"><span style="background: url(./images/icons/icon-wiki.png);">Wiki</span></a>
+            <h1>Links</h1>
+            <div class="Download-buttons">
+                <a class="button icon" href="https://github.com/Anuken/Mindustry"><span style="background: url(images/icons/icon-dev-builds.png);">Github</span></a>
+                <a class="button icon" href="https://trello.com/b/aE2tcUwF/mindustry-trello"><span style="background: url(images/icons/icon-trello.png);">Trello</span></a>
+                <a class="button icon" href="https://discord.gg/mindustry"><span style="background: url(images/icons/icon-discord.png);">Discord</span></a>
+                <a class="button icon" href="./wiki"><span style="background: url(./images/icons/icon-wiki.png);">Wiki</span></a>
+            </div>
         </div>
         <div id="Footer">
             <!--   hwat to put in here?? -->
