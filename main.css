@@ -257,13 +257,13 @@ p.caption-helper{
 }
 .git-releases{
     flex-grow: 2.5;
-    padding: 2px;
+    padding-top: 2px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .git-inf-name{
     margin-bottom: 7%;
 }
-
 
 
 /* feature, intended header blank */
