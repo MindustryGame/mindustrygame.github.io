@@ -1,0 +1,26 @@
+
+name: publish
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  gh-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Install Dependencies
+        run: npm i
+      - name: Build Project
+        run: npm run build
+      - name: Prepare Project
+        run: touch dist/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+            branch: gh-pages
+            folder: dist

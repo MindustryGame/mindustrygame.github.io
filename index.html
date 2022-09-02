@@ -7,6 +7,7 @@
    <meta name="keywords" content="Mindustry, mindustrygame, tower-defense, game" />
    <meta name="description" content="A sandbox tower-defense game." />
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
    <!-- OpenGraph Metadata-->
    <meta property="og:title" content="Mindustry">
    <meta property="og:description" content="A sandbox tower-defense game." />
@@ -21,21 +22,21 @@
    <meta name="twitter:image:src" content="https://mindustrygame.github.io/images/header.png">
    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
 
-   <link rel="icon" href="./icon.png">
+   <link rel="icon" href="./icon.png?type=ico">
    <link rel="stylesheet" async href="./styles.css">
-   <script type="module" src="./script.js" defer></script>
+   <script type="module" src="./script.ts" defer></script>
 </head>
 
 <body>
    <div class="tint">
       <div id="modal" class="modal">
-         <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+         <span class="close" tabindex=0 onclick="document.getElementById('modal').style.display='none'">&times;</span>
          <img class="modal-content" id="modalimg">
       </div>
       <div align="center">
          <ul>
             <div align="center">
-               <img src="images/header.png" alt="Mindustry Logo" class="header"
+               <img src="images/header.png?as=webp" alt="Mindustry Logo" class="header"
                   style="margin:4px; margin-top: 10px;"><img>
             </div>
             <div class="project">
@@ -65,11 +66,11 @@
                      <div style="height: 25px"></div>
                </div>
                <div class="center">
-                  <p>
+                  <h2>
                      <b>Mindustry:</b> A sandbox tower-defense game.
-                  </p>
+                  </h2>
                </div>
-               <div>
+               <main>
                   <div class="center">
                      <ul class="boxes">
                         <div class="box">
@@ -83,7 +84,7 @@
                            Build complex designs for <span style="color: #f4ba6e">processing materials</span>.
                            <br>
                            <img class="zoomer"
-                              alt="A peaceful Mindustry game with various end-game machines, transports, and units collecting resources nearby"
+                              alt="A peaceful Mindustry game with various end-game factories."
                               src="images/2.png?as=webp" type="image/webp"></img>
                         </div>
                         <div class="box">
@@ -91,7 +92,7 @@
                               servers</span>.
                            <br>
                            <img class="zoomer"
-                              alt="A peaceful Mindustry game with players wandering around and building while various mid-game machines collect resources."
+                              alt="A peaceful Mindustry game with mid-tier factories while players wander and build."
                               src="images/3.png?as=webp" type="image/webp"></img>
                         </div>
                         <iframe title="Buy Mindustry on Steam" src="https://store.steampowered.com/widget/1127400/"
@@ -101,7 +102,7 @@
                            width="101.2%" style="margin-left: -6px" height="167"></iframe>
                      </ul>
                   </div>
-               </div>
+               </main>
             </div>
          </ul>
       </div>
