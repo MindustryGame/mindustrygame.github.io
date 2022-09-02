@@ -4,10 +4,7 @@ body {
 }
 
 html {
-    background: url(images/background.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(images/background.png?as=webp) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -28,8 +25,8 @@ center {
     z-index: 1;
     height: 100%;
     width: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     overflow-y: auto;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgb(29, 29, 29));    
 }
@@ -44,7 +41,6 @@ center {
 }
 
 .header{
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     width: 600px; 
 }
@@ -61,11 +57,6 @@ ul {
 
 ul.list {
     list-style-type: disc;
-}
-
-ul.list2 {
-    list-style-type: disc;
-    line-height: 25px;
 }
 
 li.project {
@@ -120,18 +111,6 @@ h2 {
     height: 40px;
 }
 
-.thumbnail:hover {
-    position:relative;
-    top:-25px;
-    left:-35px;
-    width:400px;
-    margin: 0;
-    padding: 0;
-    height:auto;
-    display:block;
-    z-index:999;
-}
-
 a.button {
     text-decoration: none;
     text-align: center;
@@ -161,20 +140,6 @@ a.button:hover {
     box-shadow: 0px 0px 16px rgba(0,0,0,0.4);
 }
 
-.noscriptmsg {
-    text-align: center;
-    padding: 100px;
-    margin: 10px;
-    font-size: 20px;
-    background-color: lightskyblue;
-    border-radius: 16px;
-}
-
-.gif {
-    color: white;
-    opacity: 0.6;
-}
-
 /*MODAL BEGIN*/
 
 .top{
@@ -193,22 +158,7 @@ a.button:hover {
     transition: 0.2s;
 }
 
-.zoomer.height1{
-}
-
-.zoomer.height2{
-    max-width: none;
-    max-height: 160;
-}
-
-.zoomer.height3{
-    max-width: none;
-    max-height: 140;
-}
-
 .zoomer:hover {opacity: 0.8;}
-
-.zoomer.gif:hover {opacity: 1;}
 
 .modal {
     display: none;
@@ -234,27 +184,9 @@ a.button:hover {
     border-radius: 16px;
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-.modal-content, #caption { 
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
+.modal-content { 
     animation-name: zoom;
     animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
