@@ -1,0 +1,2 @@
+!function(){const e=window.innerWidth<=800&&window.innerHeight<=600,t=document.getElementById("modal");t.addEventListener("click",(e=>{e.target==t&&(t.style.display="none")}));const n=document.getElementById("modalimg"),l=document.getElementsByClassName("zoomer");for(const s of l)e||s.addEventListener("click",(()=>{t.style.display="block",n.src=s.src,n.alt=s.alt}));document.getElementsByClassName("close")[0].addEventListener("click",(()=>{t.style.display="none"}))}();
+//# sourceMappingURL=index.8c3842b5.js.map
